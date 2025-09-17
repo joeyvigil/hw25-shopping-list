@@ -3,7 +3,7 @@ Create a shopping list application that demonstrates advanced DOM manipulation, 
 
 ## Setup
 
-Create two files: shopping_list.html and shopping_list.js
+Create two files: *shopping_list.html* and *shopping_list.js*
 
 ## HTML Requirements
 
@@ -34,7 +34,7 @@ Styling Requirements:
 
 ## JavaScript Requirements
 
-Your shopping_list.js file should implement the following functionality:
+Your *shopping_list.js* file should implement the following functionality:
 
 1.  Add Items
     -   Add items with just the name
