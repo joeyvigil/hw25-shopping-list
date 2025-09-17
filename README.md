@@ -25,7 +25,7 @@ Required Elements:
 Styling Requirements:
 
 -   Style your shopping list to look clean and professional
--   Make completed items visually distinct (strikethrough, different color, etc.)
+-   Make completed items visually distinct (strike-through, different color, etc.)
 -   Style buttons and input fields appropriately
 -   Add hover effects and transitions if desired
 -   Make it responsive for different screen sizes (OPTIONAL)
