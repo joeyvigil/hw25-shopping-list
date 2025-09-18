@@ -31,7 +31,7 @@ myForm.addEventListener("submit", (event) => {
     newItem.type = "button";
     newItem.className = "list-group-item list-group-item-action";
     newItem.innerHTML = `<b>${formFields[0].value}:</b> ${formFields[1].value}`;
-    newItem.style.backgroundColor = "lightcoral";
+    newItem.style.backgroundColor = "tan";
     // newItem.style.textDecoration = "line-through";
     listGroup.appendChild(newItem);
     formFields[0].value = "";
@@ -44,14 +44,14 @@ myForm.addEventListener("submit", (event) => {
 });
 
 listGroup.addEventListener("click", (event) => {
-    if (event.target.style.backgroundColor === "lightcoral" && event.target.type === "button"){ 
+    if (event.target.style.backgroundColor === "tan" && event.target.type === "button"){ 
         event.target.style.textDecoration = "line-through";
-        event.target.style.backgroundColor = "lightseagreen";
+        event.target.style.backgroundColor = "chocolate";
         remaining--;
         completed++;
-    } else if (event.target.style.backgroundColor === "lightseagreen" && event.target.type === "button"){
+    } else if (event.target.style.backgroundColor === "chocolate" && event.target.type === "button"){
         event.target.style.textDecoration = "none";
-        event.target.style.backgroundColor = "lightcoral";
+        event.target.style.backgroundColor = "tan";
         remaining++;
         completed--;
     }
@@ -64,7 +64,7 @@ listGroup.addEventListener("click", (event) => {
 document.getElementById("clear-completed").addEventListener("click", () => {
     const items = listGroup.querySelectorAll("button");
     items.forEach(item => {
-        if (item.style.backgroundColor === "lightseagreen") {
+        if (item.style.backgroundColor === "chocolate") {
             listGroup.removeChild(item);
             completed--;
         }
