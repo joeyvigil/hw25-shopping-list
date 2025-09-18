@@ -9,7 +9,7 @@ https://joeyvigil.github.io/hw25-shopping-list/
 
 mobile view
 
-![Shopping List Mobile Screenshot](mobile_preview.jpg)
+![Shopping List Mobile Screenshot](mobile.jpg)
 
 ## Setup
 
