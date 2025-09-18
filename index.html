@@ -9,9 +9,38 @@
         * {
             /* border: 1px solid red; */
         }
+
+        body {
+            background-image: url('bleach.png');
+        }
+        .btn {
+            margin: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: #4CAF50; 
+            color: white;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #45a049;
+            scale: 1.05;
+        }
+
+        .btn-secondary {
+            background-color: #f44336; 
+            color: white;
+            border: none;
+        }
+        .btn-secondary:hover {
+            background-color: #da190b;
+            scale: 1.05;
+        }
+
         .my-container{
             border: 1px solid black;
-            /* background-color: #f0f0f0; */
+            background-color: #f0f0f0;
             width: 360px;
             margin: 20px auto;
             padding: 20px;
@@ -38,37 +67,53 @@
 
   </head>
   <body>
+    <header>
+        <h1>
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-card-checklist" viewBox="0 0 16 16">
+        <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z"/>
+        <path d="M7 5.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0M7 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0"/>
+        </svg>
+        Shopping List App</h1>
+    </header>
 
-
-    <h1>Joey's Todo List App</h1>
     <!-- form  -->
     <div class="my-container">
     <form id="my-form">
     <div class="mb-3">
-        <label class="form-label">Todo Item</label>
-        <input type="text" class="form-control" id="todoText" value="Walk Dog" required>
+        <label class="form-label">Item</label>
+        <input type="text" class="form-control" id="todoText" value="Eggs" required>
     </div>
 
     <div class="mb-3">
-        <label class="form-label">Due Date</label>
-        <input type="text" class="form-control" id="dueDate" value="Tomorrow" required>
+        <label class="form-label">Note</label>
+        <input type="text" class="form-control" id="dueDate" value="1 dozen, brown" required>
     </div>
 
-    <button type="submit" class="btn btn-primary">Add</button>
-
+    <button type="submit" class="btn btn-primary">Add +</button>
+    
     </form>
+    
     </div>
     <!-- end form -->
     <!-- list -->
     <div class="my-container">
+        <h2>List <button class="btn btn-secondary" id="clear-completed">Clear Completed</button><button class="btn btn-secondary" id="clear-all">Clear All</button></h2>
+        
     <div class="list-group" id ="list-group">
-        <h2>List</h2>
+
         <!-- <button type="button" class="list-group-item list-group-item-action">A second item</button> -->
 
     </div>
     </div>
-
     <!-- end list -->
+    <!-- stats -->
+    <div class="my-container">
+        <h2>Stats</h2>
+        <p>Total items: <span id="total-count">0</span></p>
+        <p>Completed items: <span id="completed-count">0</span></p>
+        <p>Remaining items: <span id="remaining-count">0</span></p>
+    </div>
+    <!-- end stats -->
 
 
     <script src="todo.js"></script>

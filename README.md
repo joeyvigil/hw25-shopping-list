@@ -18,9 +18,9 @@ Required Elements:
 -   A button with id "clear-completed" to clear completed items
 -   An unordered list with id "shopping-list" to display items
 -   A stats section with id "stats" containing:
--   Total items count (span with id "total-count")
--   Completed items count (span with id "completed-count")
--   Remaining items count (span with id "remaining-count")
+    -   Total items count (span with id "total-count")
+    -   Completed items count (span with id "completed-count")
+    -   Remaining items count (span with id "remaining-count")
 
 Styling Requirements:
 
