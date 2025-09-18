@@ -1,9 +1,11 @@
 # hw25-shopping-list
 Create a shopping list application that demonstrates advanced DOM manipulation, event delegation, and data management.
 
-## GH Pages Link
+## GH Pages
 
 https://joeyvigil.github.io/hw25-shopping-list/
+
+![Shopping List Screenshot](preview.jpg)
 
 ## Setup
 
