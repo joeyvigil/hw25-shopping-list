@@ -3,9 +3,21 @@ const listGroup = document.getElementById("list-group");
 let remaining = 0;
 let completed = 0;
 
-//arrow function version
-// myForm.addEventListener("submit", (event) => {
-//     event.preventDefault();
+if (localStorage.getItem("innerHTML")) {
+    listGroup.innerHTML = localStorage.getItem("innerHTML");
+    remaining = parseInt(localStorage.getItem("remaining"));
+    completed = parseInt(localStorage.getItem("completed"));
+    document.getElementById("total-count").innerText = remaining + completed;
+    document.getElementById("completed-count").innerText  = completed;
+    document.getElementById("remaining-count").innerText = remaining;
+}
+
+save = () => {
+    localStorage.setItem("innerHTML", listGroup.innerHTML);
+    localStorage.setItem("remaining", remaining);
+    localStorage.setItem("completed", completed);
+    
+}
 
 myForm.addEventListener("submit", (event) => {
     // console.log(event.target);
@@ -29,6 +41,8 @@ myForm.addEventListener("submit", (event) => {
     document.getElementById("completed-count").innerText  = completed;
     document.getElementById("remaining-count").innerText = remaining;
 
+    save();
+
 });
 
 listGroup.addEventListener("click", (event) => {
@@ -46,7 +60,7 @@ listGroup.addEventListener("click", (event) => {
     document.getElementById("total-count").innerText = remaining + completed;
     document.getElementById("completed-count").innerText  = completed;
     document.getElementById("remaining-count").innerText = remaining;
-    
+    save();
 });
 
 document.getElementById("clear-completed").addEventListener("click", () => {
@@ -61,7 +75,7 @@ document.getElementById("clear-completed").addEventListener("click", () => {
     document.getElementById("completed-count").innerText  = completed;
     document.getElementById("remaining-count").innerText = remaining;
     
-
+    save();
 });
 
 document.getElementById("clear-all").addEventListener("click", () => {
@@ -74,5 +88,5 @@ document.getElementById("clear-all").addEventListener("click", () => {
     document.getElementById("total-count").innerText = remaining + completed;
     document.getElementById("completed-count").innerText  = completed;
     document.getElementById("remaining-count").innerText = remaining;
-
+    save();
 });
