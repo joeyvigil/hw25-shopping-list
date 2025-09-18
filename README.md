@@ -7,6 +7,10 @@ https://joeyvigil.github.io/hw25-shopping-list/
 
 ![Shopping List Screenshot](preview.jpg)
 
+mobile view
+
+![Shopping List Mobile Screenshot](mobile_preview.jpg)
+
 ## Setup
 
 Create two files: *shopping_list.html* and *shopping_list.js*
