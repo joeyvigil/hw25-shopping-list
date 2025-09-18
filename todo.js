@@ -1,5 +1,5 @@
 const myForm = document.getElementById("my-form");
-const listGroup = document.getElementById("list-group");
+const listGroup = document.getElementById("shopping-list");
 let remaining = 0;
 let completed = 0;
 

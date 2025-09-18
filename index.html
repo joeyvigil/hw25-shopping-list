@@ -81,7 +81,7 @@
     <form id="my-form">
     <div class="mb-3">
         <label class="form-label">Item</label>
-        <input type="text" class="form-control" id="todoText" value="Eggs" required>
+        <input type="text" class="form-control" id="item-input" value="Eggs" required>
     </div>
 
     <div class="mb-3">
@@ -89,7 +89,7 @@
         <input type="text" class="form-control" id="dueDate" value="1 dozen, brown">
     </div>
 
-    <button type="submit" class="btn btn-primary">Add +</button>
+    <button type="submit" class="btn btn-primary" id="add-btn">Add +</button>
     
     </form>
     
@@ -99,7 +99,7 @@
     <div class="my-container">
         <h2>List <button class="btn btn-secondary" id="clear-completed">Clear Completed</button><button class="btn btn-secondary" id="clear-all">Clear All</button></h2>
         
-    <div class="list-group" id ="list-group">
+    <div class="list-group" id ="shopping-list" >
 
         <!-- <button type="button" class="list-group-item list-group-item-action">A second item</button> -->
 
