@@ -3,6 +3,7 @@ const listGroup = document.getElementById("list-group");
 let remaining = 0;
 let completed = 0;
 
+//load
 if (localStorage.getItem("innerHTML")) {
     listGroup.innerHTML = localStorage.getItem("innerHTML");
     remaining = parseInt(localStorage.getItem("remaining"));
@@ -16,17 +17,16 @@ save = () => {
     localStorage.setItem("innerHTML", listGroup.innerHTML);
     localStorage.setItem("remaining", remaining);
     localStorage.setItem("completed", completed);
-    
 }
 
 myForm.addEventListener("submit", (event) => {
     // console.log(event.target);
     event.preventDefault();
     const formFields = document.querySelectorAll(".form-control");
-    console.log(formFields);
+    // console.log(formFields);
     // const myUser = {};
 
-    console.log(`${formFields[0].value}: ${formFields[1].value}`);
+    // console.log(`${formFields[0].value}: ${formFields[1].value}`);
     const newItem = document.createElement("button");
     newItem.type = "button";
     newItem.className = "list-group-item list-group-item-action";
@@ -40,9 +40,7 @@ myForm.addEventListener("submit", (event) => {
     document.getElementById("total-count").innerText = remaining + completed;
     document.getElementById("completed-count").innerText  = completed;
     document.getElementById("remaining-count").innerText = remaining;
-
     save();
-
 });
 
 listGroup.addEventListener("click", (event) => {
@@ -74,7 +72,6 @@ document.getElementById("clear-completed").addEventListener("click", () => {
     document.getElementById("total-count").innerText = remaining + completed;
     document.getElementById("completed-count").innerText  = completed;
     document.getElementById("remaining-count").innerText = remaining;
-    
     save();
 });
 
